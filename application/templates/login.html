@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Please login</h1>
+    <br>
+    <form action="" method="post">
+        <input type="text" placeholder="Login" name="login" value="{{ request.form.login }}">
+        <input type="password" placeholder="Password" name="password" value="{{ request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+    </form>
+    {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+</div>
+</body>
+</html>
